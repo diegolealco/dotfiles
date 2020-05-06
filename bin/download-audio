@@ -1,0 +1,11 @@
+#!/bin/bash
+
+youtube-dl \
+  --add-metadata \
+  --ignore-errors \
+  --output "%(uploader)s/%(upload_date)s %(title)s (%(duration)ss).%(ext)s" \
+  --extract-audio \
+  --audio-format "mp3" \
+  --audio-quality 0 \
+  --embed-thumbnail \
+  $@

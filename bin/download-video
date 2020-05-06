@@ -1,0 +1,11 @@
+#!/bin/bash
+
+youtube-dl \
+  --add-metadata \
+  --ignore-errors \
+  --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' \
+  --merge-output-format 'mp4' \
+  --output '%(upload_date)s - %(title)s.%(ext)s' \
+  --embed-thumbnail \
+  --download-archive 'archive.txt' \
+  $@

@@ -1,0 +1,23 @@
+{
+	"print to console": {
+		"prefix": "cl",
+		"body": [
+			"console.log($1$0);"
+		],
+		"description": "log output to console"
+	},
+	"print to console with description": {
+		"prefix": "cll",
+		"body": [
+			"console.log('$0' ,$0);"
+		],
+		"description": "log output to console"
+	},
+	"fat arrow function": {
+		"prefix": "fa",
+		"body": [
+			"($1) => $0"
+		],
+		"description": "fat arrow function"
+	},
+}

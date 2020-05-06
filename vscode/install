@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+install_extensions() {
+    while read -r LINE; do
+        code --install-extension "$LINE"
+    done < "$PWD/extensions.txt"
+}
+
+apply_symlink() {
+    if [ "$(uname)" = "Darwin" ]; then
+        BASE_CONFIG_DIR="$HOME/Library/Application Support/Code/User"
+    else
+        BASE_CONFIG_DIR="$HOME/.config/Code/User"
+    fi
+
+    if [ -d "$BASE_CONFIG_DIR" ]; then
+        printf "\nBacking up existing configuration directory...\n"
+        mv -f "$BASE_CONFIG_DIR" "$BASE_CONFIG_DIR~"
+    fi
+
+    printf "\nApplying new configuration...\n"
+    ln -fns "$PWD" "$BASE_CONFIG_DIR"
+}
+
+install_extensions
+apply_symlink

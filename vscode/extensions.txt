@@ -1,0 +1,17 @@
+andys8.jest-snippets
+batisteo.vscode-django
+be5invis.vscode-icontheme-nomo-dark
+bierner.markdown-preview-github-styles
+CoenraadS.bracket-pair-colorizer-2
+dbaeumer.vscode-eslint
+dunstontc.dark-plus-syntax
+humao.rest-client
+jeff-hykin.better-dockerfile-syntax
+jpoissonnier.vscode-styled-components
+ms-azuretools.vscode-docker
+ms-python.python
+octref.vetur
+Orta.vscode-jest
+ritwickdey.LiveServer
+tht13.python
+waderyan.gitblame

@@ -1,11 +1,5 @@
 # if not running interactively, do nothing
-if [ -z "$PS1" ]; then
-    return
-fi
-
-if [ -d "$HOME/.bin" ]; then
-    export PATH="$HOME/.bin:$PATH"
-fi
+[ -z "$PS1" ] && return
 
 # disable ctrl-s and ctrl-q
 stty -ixon
@@ -98,6 +92,7 @@ alias pip=pip3
 
 export VISUAL
 export EDITOR="$VISUAL"
+export PATH="$HOME/workspace/monorepo/bin:$PATH"
 
 # fnm
 export PATH=/home/diego/.fnm:$PATH

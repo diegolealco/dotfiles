@@ -25,9 +25,7 @@ if ! shopt -oq posix; then
 fi
 
 # make less more friendly for non-text input files, see lesspipe(1)
-if [ -x "/usr/bin/lesspipe" ]; then
-    eval "$(SHELL=/bin/sh lesspipe)"
-fi
+[ -x "/usr/bin/lesspipe" ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # prompt
 PS1="\n \[\033[01;34m\]\w \[\033[00m\]\$ "
@@ -54,14 +52,11 @@ if [ "$(uname)" = "Darwin" ]; then
     export PROJECT_HOME="$HOME/Desktop"
     export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
     source /usr/local/bin/virtualenvwrapper.sh
-fi
 
-if [ "$(uname)" = "Linux" ]; then
+    alias python=python3
+    alias pip=pip3
+else
     VISUAL="vim"
-
-    open () {
-        xdg-open "$@" &>/dev/null
-    }
 fi
 
 if [ -x /usr/bin/dircolors ]; then
@@ -87,8 +82,6 @@ alias bashrc="$VISUAL $HOME/.bashrc && . $HOME/.bashrc"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
-alias python=python3
-alias pip=pip3
 
 export VISUAL
 export EDITOR="$VISUAL"

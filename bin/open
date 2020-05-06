@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ "$(uname)" = "Linux" ]
+then
+    xdg-open "$@" &>/dev/null
+else
+    open "$@"
+fi
+

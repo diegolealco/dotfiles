@@ -15,8 +15,8 @@
 *~
 
 ## SPECIFIC
-vim/.vim/plugged
-vim/.vim/tmp
+dotfiles/.vim/plugged
+dotfiles/.vim/tmp
 
 vscode/globalStorage/
 vscode/workspaceStorage/

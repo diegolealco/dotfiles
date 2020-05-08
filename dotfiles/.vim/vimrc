@@ -1,23 +1,10 @@
-" https://github.com/sirver/ultisnips/issues/996
-if has('python3')
-    silent! python3 1
-endif
-
 let $VIMHOME=expand('<sfile>:p:h:h')
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsSnippetDirectories = [$VIMHOME.'/skel/']
-let g:UltiSnipsSnippetsDir = $VIMHOME.'/skel/'
-let g:ale_fixers = { '*':  ['prettier', 'eslint'] }
-let g:ale_javascript_prettier_options = "--loglevel silent"
 let g:ctrlp_cache_dir = $HOME.'/.vim_turds/ctrlp'
 let g:ctrlp_map = '<space>f'
 let g:ctrlp_reuse_window = 'nofile'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = ''
 let g:gitgutter_map_keys = 0
-let g:vue_pre_processors = 'detect_on_enter'
 let g:windowswap_map_keys = 0
 
 if executable('ag')
@@ -28,19 +15,12 @@ endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'gavocanov/vim-js-indent', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'jreybert/vimagit'
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-dirvish'
-Plug 'kristijanhusak/vim-dirvish-git'
-Plug 'leafgarland/typescript-vim'
 Plug 'mattn/emmet-vim'
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'moll/vim-bbye'
 Plug 'nanotech/jellybeans.vim'
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'posva/vim-vue'
-Plug 'sirver/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -48,9 +28,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 call plug#end()
 
 filetype plugin indent on
@@ -199,7 +177,6 @@ cnoremap bd Bdelete
 nnoremap ]h :GitGutterNextHunk<CR>
 nnoremap [h :GitGutterPrevHunk<CR>
 
-nnoremap <Space>a :ALEFix<CR>
 nnoremap <Space>b :CtrlPBuffer<CR>
 nnoremap <Space>l :nohlsearch<C-r>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-l>
 nnoremap <Space>s :%s//gc<Left><Left><Left>

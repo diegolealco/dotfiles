@@ -36,8 +36,6 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 if [ "$(uname)" = "Darwin" ]; then
-    VISUAL="mvim -v"
-
     if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
         . "$(brew --prefix)/etc/bash_completion"
     elif [ -f "$(brew --prefix)/etc/bash_completion.d/git-completion.bash" ]; then
@@ -55,8 +53,6 @@ if [ "$(uname)" = "Darwin" ]; then
 
     alias python=python3
     alias pip=pip3
-else
-    VISUAL="vim"
 fi
 
 if [ -x /usr/bin/dircolors ]; then
@@ -68,7 +64,7 @@ if [ -x /usr/bin/dircolors ]; then
     alias ls='ls --color=auto'
 fi
 
-alias vim="$VISUAL"
+alias vim="vi"
 alias la="ls -gGAh"
 alias ll="la"
 alias df="df -h"
@@ -78,12 +74,12 @@ alias free="free -m"
 alias tree="tree -FC"
 alias cd..="cd .."
 alias ..="cd .."
-alias bashrc="$VISUAL $HOME/.bashrc && . $HOME/.bashrc"
+alias bashrc="vi $HOME/.bashrc && . $HOME/.bashrc"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
-export VISUAL
+export VISUAL="vi"
 export EDITOR="$VISUAL"
 export PATH="$HOME/workspace/monorepo/bin:$PATH"
 

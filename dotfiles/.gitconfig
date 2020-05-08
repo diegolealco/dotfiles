@@ -9,8 +9,5 @@
   s = status
   k = log --graph --oneline --decorate
   l = log --graph --stat --decorate --patch
-  publish = !"git push -u origin $(git rev-parse --abbrev-ref HEAD)"
-  cleanup-branches = !"c() { git branch --merged | egrep -v \"(^\\*|master|dev)\" | xargs git branch -d; }; c"
-  id-personal = !"pi() { git config user.email 'code@diegoleal.co'; git config user.name 'Diego Leal'; }; pi"
 [color]
   ui = auto

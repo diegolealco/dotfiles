@@ -5,7 +5,6 @@ let g:ctrlp_reuse_window = 'nofile'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = ''
 let g:gitgutter_map_keys = 0
-let g:windowswap_map_keys = 0
 
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s --files-with-matches --nocolor --nogroup --hidden -g ""'
@@ -15,7 +14,6 @@ endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'jreybert/vimagit'
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'mattn/emmet-vim'
@@ -28,7 +26,6 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'wesQ3/vim-windowswap'
 call plug#end()
 
 filetype plugin indent on
@@ -181,8 +178,6 @@ nnoremap <Space>b :CtrlPBuffer<CR>
 nnoremap <Space>l :nohlsearch<C-r>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-l>
 nnoremap <Space>s :%s//gc<Left><Left><Left>
 nnoremap <Space>g :Goyo<CR>
-nnoremap <Space>w :call WindowSwap#EasyWindowSwap()<CR>
-nnoremap <Space>m :MagitOnly<CR>
 
 command! Spell set spell!
 command! SpellEnglish set spell spelllang=en_gb

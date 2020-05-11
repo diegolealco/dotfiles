@@ -47,7 +47,7 @@ if [ "$(uname)" = "Darwin" ]; then
     fi
 
     export WORKON_HOME="$HOME/.virtualenvs"
-    export PROJECT_HOME="$HOME/Desktop"
+    export PROJECT_HOME="$HOME/workspace"
     export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
     source /usr/local/bin/virtualenvwrapper.sh
 

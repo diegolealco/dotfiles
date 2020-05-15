@@ -6,6 +6,8 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = ''
 let g:gitgutter_map_keys = 0
 let g:windowswap_map_keys = 0
+let g:ale_fixers = { '*':  ['prettier', 'eslint'] }
+let g:ale_javascript_prettier_options = "--loglevel silent"
 
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s --files-with-matches --nocolor --nogroup --hidden -g ""'
@@ -15,12 +17,13 @@ endif
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'jreybert/vimagit'
 Plug 'junegunn/goyo.vim'
 Plug 'justinmk/vim-dirvish'
 Plug 'mattn/emmet-vim'
 Plug 'moll/vim-bbye'
 Plug 'nanotech/jellybeans.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -28,6 +31,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
 call plug#end()
 
@@ -147,6 +151,12 @@ augroup cd_on_startup
     autocmd VimEnter * if isdirectory(expand('%')) | cd % | endif
 augroup END
 
+" augroup fix_tsx_syntax
+"     autocmd!
+"     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+"     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+" augroup END
+
 nnoremap <F1> <Nop>
 vnoremap <F1> <Nop>
 inoremap <F1> <Nop>
@@ -177,12 +187,12 @@ cnoremap bd Bdelete
 nnoremap ]h :GitGutterNextHunk<CR>
 nnoremap [h :GitGutterPrevHunk<CR>
 
+nnoremap <Space>a :ALEFix<CR>
 nnoremap <Space>b :CtrlPBuffer<CR>
 nnoremap <Space>l :nohlsearch<C-r>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-l>
 nnoremap <Space>s :%s//gc<Left><Left><Left>
 nnoremap <Space>g :Goyo<CR>
 nnoremap <Space>w :call WindowSwap#EasyWindowSwap()<CR>
-nnoremap <Space>m :MagitOnly<CR>
 
 command! Spell set spell!
 command! SpellEnglish set spell spelllang=en_gb

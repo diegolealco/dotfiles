@@ -81,10 +81,11 @@ set wildcharm=<C-z>
 set wildignorecase
 set wildmenu
 set wildmode=list:full
-set wildignore=*/node_modules/*,*/bower_components/*,*/.git/*,*/.hg/*,*/.svn/*
-set wildignore+=,*/tmp/*,*.jpg,*.png,*.bmp,*.gif,*.ico,*.pdf,*.psd,*.swp,*.bak
-set wildignore+=,*.tar.*,*.zip,*.so,*.pyc,*.sln,*.Master,*.csproj,*.csproj.user
-set wildignore+=,*.exe,*.dll,*.pdb,*.min.*,*.cache,*.class
+set wildignore=*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim$,\~$,*/.log
+set wildignore+=*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*.gif
+set wildignore+=*/.ist,*/.fdb_latexmk,*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.jpg,*.png,*.bmp,*.ico
+set wildignore+=*.pdf,*.psd,*.swp,*.bak,*.tar.*,*.zip,*.so,*.sln,*.Master,*.csproj,*.csproj.user
+set wildignore+=*.exe,*.dll,*.pdb,*.min.*,*.cache,*.class
 
 set autoindent
 set expandtab
@@ -151,11 +152,11 @@ augroup cd_on_startup
     autocmd VimEnter * if isdirectory(expand('%')) | cd % | endif
 augroup END
 
-" augroup fix_tsx_syntax
-"     autocmd!
-"     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
-"     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-" augroup END
+augroup fix_tsx_syntax
+    autocmd!
+    autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+    autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+augroup END
 
 nnoremap <F1> <Nop>
 vnoremap <F1> <Nop>

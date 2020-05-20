@@ -6,8 +6,14 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = ''
 let g:gitgutter_map_keys = 0
 let g:windowswap_map_keys = 0
-let g:ale_fixers = { '*':  ['prettier', 'eslint'] }
+let g:ale_fixers = { '*':  ['eslint'] }
 let g:ale_javascript_prettier_options = "--loglevel silent"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories = [$VIMHOME.'/skel/']
+let g:UltiSnipsSnippetsDir = $VIMHOME.'/skel/'
 
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s --files-with-matches --nocolor --nogroup --hidden -g ""'
@@ -24,6 +30,7 @@ Plug 'moll/vim-bbye'
 Plug 'nanotech/jellybeans.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'sirver/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -81,11 +88,7 @@ set wildcharm=<C-z>
 set wildignorecase
 set wildmenu
 set wildmode=list:full
-set wildignore=*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim$,\~$,*/.log
-set wildignore+=*/.aux,*/.cls,*/.aux,*/.bbl,*/.blg,*/.fls,*/.fdb*/,*/.toc,*/.out,*/.glo,*.gif
-set wildignore+=*/.ist,*/.fdb_latexmk,*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.jpg,*.png,*.bmp,*.ico
-set wildignore+=*.pdf,*.psd,*.swp,*.bak,*.tar.*,*.zip,*.so,*.sln,*.Master,*.csproj,*.csproj.user
-set wildignore+=*.exe,*.dll,*.pdb,*.min.*,*.cache,*.class
+set wildignore=*/node_modules/*,*/__pycache__/,*/venv/*,*/.log,*.gif,*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.jpg,*.png,*.bmp,*.ico,*.pdf,*.psd,*.swp,*.bak,*.tar.*,*.zip,*.so,*.sln,*.Master,*.csproj,*.csproj.user,*.min.*
 
 set autoindent
 set expandtab

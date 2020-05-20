@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CASKS="firefox google-chrome gpg-suite-no-mail postman spotify transmission vlc dropbox iterm2 slack dbeaver-community chromedriver gimp bitwarden"
+CASKS="firefox google-chrome gpg-suite-no-mail postman spotify transmission vlc dropbox iterm2 slack dbeaver-community chromedriver gimp bitwarden scroll-reverser amethyst"
 for CASK in $CASKS; do brew cask install "$CASK"; done
 
 FORMULAE="wget coreutils moreutils findutils bash bash-completion git ack tree stow the_silver_searcher openssl htop ranger mosh cmus mpv youtube-dl Schniz/tap/fnm"

@@ -1,9 +1,9 @@
 #!/bin/sh
 
-CASKS="firefox google-chrome gpg-suite-no-mail postman spotify transmission vlc dropbox iterm2 slack dbeaver-community chromedriver gimp bitwarden scroll-reverser amethyst"
+CASKS="firefox google-chrome gpg-suite-no-mail postman spotify transmission iterm2 slack dbeaver-community chromedriver bitwarden scroll-reverser amethyst 1password"
 for CASK in $CASKS; do brew cask install "$CASK"; done
 
-FORMULAE="wget coreutils moreutils findutils bash bash-completion git ack tree stow the_silver_searcher openssl htop ranger mosh cmus mpv youtube-dl Schniz/tap/fnm"
+FORMULAE="wget coreutils moreutils findutils bash bash-completion curl git ack tree stow the_silver_searcher openssl htop ranger mosh cmus mpv youtube-dl Schniz/tap/fnm"
 for FORMULA in $FORMULAE; do brew install "$FORMULA"; done
 
 # Switch to using brew-installed bash as default shell

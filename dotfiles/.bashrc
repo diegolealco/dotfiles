@@ -46,10 +46,12 @@ if [ "$(uname)" = "Darwin" ]; then
         export PATH="$PATH:$(brew --prefix coreutils)/libexec/gnubin"
     fi
 
+    export PATH="/usr/local/opt/ruby/bin:$PATH"
+
     export WORKON_HOME="$HOME/.virtualenvs"
     export PROJECT_HOME="$HOME/workspace"
-    export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-    source /usr/local/bin/virtualenvwrapper.sh
+    export VIRTUALENVWRAPPER_PYTHON="/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
+    source "/Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh"
 
     alias python=python3
     alias pip=pip3

@@ -12,8 +12,8 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
-let g:UltiSnipsSnippetDirectories = [$VIMHOME.'/skel/']
-let g:UltiSnipsSnippetsDir = $VIMHOME.'/skel/'
+let g:UltiSnipsSnippetDirectories = [$VIMHOME.'/.vim/skel/']
+let g:UltiSnipsSnippetsDir = $VIMHOME.'/.vim/skel/'
 
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s --files-with-matches --nocolor --nogroup --hidden -g ""'

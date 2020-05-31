@@ -5,15 +5,12 @@ snap install docker
 snap install --classic code
 snap install --classic aws-cli
 snap install --classic postman
-snap install --classic multipass
-snap install gravit-designer
 snap install ffmpeg
 snap install spotify
 snap install youtube-dl
 snap install dbeaver-ce
 snap install bitwarden
 snap install ncdu
-snap install 1password-linux
 
 apt update
 apt dist-upgrade -y
@@ -26,7 +23,6 @@ apt install -y \
   gimp \
   gimp-plugin-registry \
   inkscape \
-  darktable \
   aria2 \
   git \
   stow \
@@ -49,7 +45,13 @@ apt install -y \
   bleachbit \
   kazam \
   mosh \
-  gddrescue
+  gddrescue \
+  tmux \
+  gnome-shell-extension-no-annoyance \
+  gnome-shell-extension-disconnect-wifi \
+  gnome-shell-extension-caffeine \
+  gnome-shell-extension-bluetooth-quick-connect \
+  gnome-shell-extension-prefs
 
 systemctl enable tlp
 tlp start

@@ -24,13 +24,13 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'justinmk/vim-dirvish'
 Plug 'mattn/emmet-vim'
 Plug 'moll/vim-bbye'
 Plug 'nanotech/jellybeans.vim'
+Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'sirver/ultisnips'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
@@ -150,16 +150,21 @@ augroup recursive_mkdir_on_save
     autocmd BufWritePre * if !isdirectory(expand("<afile>:p:h")) | call mkdir(expand("<afile>:p:h"), "p") | endif
 augroup END
 
-augroup cd_on_startup
-    autocmd!
-    autocmd VimEnter * if isdirectory(expand('%')) | cd % | endif
-augroup END
-
 augroup fix_tsx_syntax
     autocmd!
     autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 augroup END
+
+function! NERDTreeToggleFind()
+    if exists("g:NERDTree") && g:NERDTree.IsOpen()
+        NERDTreeClose
+    elseif filereadable(expand('%'))
+        NERDTreeFind
+    else
+        NERDTree
+    endif
+endfunction
 
 nnoremap <F1> <Nop>
 vnoremap <F1> <Nop>
@@ -190,6 +195,7 @@ nnoremap vv ^vg_
 cnoremap bd Bdelete
 nnoremap ]h :GitGutterNextHunk<CR>
 nnoremap [h :GitGutterPrevHunk<CR>
+nnoremap - :call NERDTreeToggleFind()<CR>
 
 nnoremap <Space>a :ALEFix<CR>
 nnoremap <Space>b :CtrlPBuffer<CR>
@@ -203,4 +209,3 @@ command! SpellEnglish set spell spelllang=en_gb
 command! SpellSpanish set spell spelllang=es_es
 command! EditVimrc edit $MYVIMRC
 command! SourceVimrc source $MYVIMRC
-

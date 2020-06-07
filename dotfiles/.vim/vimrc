@@ -67,7 +67,8 @@ set formatoptions+=j
 set hidden
 set laststatus=2
 set list
-set listchars=tab:▸\ ,trail:•
+set showbreak=↪\ 
+set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set mouse=a
 set nostartofline
 set number

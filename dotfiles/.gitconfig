@@ -11,3 +11,5 @@
   l = log --graph --stat --decorate --patch
 [color]
   ui = auto
+[pull]
+	rebase = false

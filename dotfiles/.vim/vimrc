@@ -8,6 +8,7 @@ let g:gitgutter_map_keys = 0
 let g:windowswap_map_keys = 0
 let g:ale_fixers = { '*':  ['eslint'] }
 let g:ale_javascript_prettier_options = "--loglevel silent"
+let g:ale_fix_on_save = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
@@ -119,13 +120,13 @@ set background=dark
 colorscheme jellybeans
 syntax enable
 
-set guioptions=cTm
+set guioptions=cm
 set linespace=1
 
 if has('win32')
     set guifont=Consolas:h12:cANSI:qDRAFT
 elseif has('mac')
-    set guifont=DejaVuSansMono:h14
+    set guifont=Source\ Code\ Pro:h14
 elseif has('unix')
     set guifont=DejaVu\ Sans\ Mono\ 11
 endif
@@ -200,7 +201,7 @@ nnoremap - :call NERDTreeToggleFind()<CR>
 nnoremap <Space>a :ALEFix<CR>
 nnoremap <Space>b :CtrlPBuffer<CR>
 nnoremap <Space>l :nohlsearch<C-r>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-l>
-nnoremap <Space>s :%s//gc<Left><Left><Left>
+nnoremap <Space>s :%s///gc<Left><Left><Left>
 nnoremap <Space>g :Goyo<CR>
 nnoremap <Space>w :call WindowSwap#EasyWindowSwap()<CR>
 

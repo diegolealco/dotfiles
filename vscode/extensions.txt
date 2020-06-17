@@ -12,5 +12,6 @@ ms-azuretools.vscode-docker
 ms-python.python
 octref.vetur
 ritwickdey.LiveServer
+silvenon.mdx
 tht13.python
 waderyan.gitblame

@@ -1,13 +1,22 @@
-#!/bin/sh
+#!/bin/bash
 
-CASKS="firefox google-chrome gpg-suite-no-mail postman spotify transmission iterm2 slack dbeaver-community chromedriver bitwarden scroll-reverser amethyst 1password"
-for CASK in $CASKS; do brew cask install "$CASK"; done
+CASKS="firefox google-chrome gpg-suite-no-mail postman spotify transmission iterm2 slack dbeaver-community chromedriver bitwarden scroll-reverser 1password rectangle"
 
-FORMULAE="wget coreutils moreutils findutils bash bash-completion curl git ack tree stow the_silver_searcher openssl htop ranger mosh cmus mpv youtube-dl Schniz/tap/fnm"
-for FORMULA in $FORMULAE; do brew install "$FORMULA"; done
+for CASK in $CASKS
+do
+  brew cask install "$CASK"
+done
 
-# Switch to using brew-installed bash as default shell
-if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
+FORMULAE="wget coreutils moreutils findutils bash bash-completion curl git ack tree stow the_silver_searcher openssl htop ranger mosh cmus mpv youtube-dl Schniz/tap/fnm tmux"
+
+for FORMULA in $FORMULAE
+do
+  brew install "$FORMULA"
+done
+
+# switch to using brew-installed bash as default shell
+if ! fgrep -q '/usr/local/bin/bash' /etc/shells
+then
   echo '/usr/local/bin/bash' | sudo tee -a /etc/shells
   chsh -s /usr/local/bin/bash
 fi

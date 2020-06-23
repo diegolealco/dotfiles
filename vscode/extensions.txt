@@ -16,3 +16,4 @@ ritwickdey.LiveServer
 silvenon.mdx
 tht13.python
 waderyan.gitblame
+wmaurer.change-case

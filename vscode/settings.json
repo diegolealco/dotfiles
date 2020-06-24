@@ -40,7 +40,6 @@
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "editor.lineHeight": 20,
-  "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
   "workbench.colorTheme": "One Dark Darker"
 }

@@ -41,5 +41,5 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-  "workbench.colorTheme": "One Dark Darker"
+  "editor.fontSize": 13
 }

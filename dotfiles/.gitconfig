@@ -1,15 +1,15 @@
 [user]
-  useConfigOnly = true
+	useConfigOnly = true
 [push]
-  default = simple
+	default = simple
 [alias]
-  b = branch -a
-  c = checkout
-  f = fetch --prune
-  s = status
-  k = log --graph --oneline --decorate
-  l = log --graph --stat --decorate --patch
+	b = branch -a
+	c = checkout
+	f = fetch --prune
+	s = status
+	k = log --graph --oneline --decorate
+	l = log --graph --stat --decorate --patch
 [color]
-  ui = auto
+	ui = auto
 [pull]
 	rebase = false

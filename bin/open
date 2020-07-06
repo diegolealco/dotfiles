@@ -2,7 +2,7 @@
 
 if [ "$(uname)" = "Linux" ]
 then
-    xdg-open "$@" &>/dev/null
+    nohup xdg-open "$@" > "/tmp/nohup vim.log" & disown
 else
     open "$@"
 fi

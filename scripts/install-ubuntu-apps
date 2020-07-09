@@ -51,7 +51,9 @@ apt install -y \
   gnome-shell-extension-disconnect-wifi \
   gnome-shell-extension-caffeine \
   gnome-shell-extension-bluetooth-quick-connect \
-  gnome-shell-extension-prefs
+  gnome-shell-extension-prefs \
+  gnome-shell-extension-impatience \
+  gnome-shell-extension-disconnect-wifi
 
 systemctl enable tlp
 tlp start

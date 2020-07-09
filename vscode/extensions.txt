@@ -6,13 +6,11 @@ DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 humao.rest-client
 jeff-hykin.better-dockerfile-syntax
-JoelCrosby.one-dark-darker
 jpoissonnier.vscode-styled-components
 letrieu.expand-region
 ms-azuretools.vscode-docker
 ms-python.python
 octref.vetur
-ritwickdey.LiveServer
 silvenon.mdx
 tht13.python
 waderyan.gitblame

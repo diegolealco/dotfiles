@@ -23,6 +23,7 @@ if [[ "$(uname)" = "Darwin" ]]; then
 fi
 
 alias la="ls -lAh"
+alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 EDITOR='vim'
 VISIAL="vim"

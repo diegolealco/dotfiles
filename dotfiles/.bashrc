@@ -83,7 +83,7 @@ alias mv='mv -i'
 
 export VISUAL="vi"
 export EDITOR="$VISUAL"
-export PATH="$HOME/workspace/monorepo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # fnm
 export PATH=/home/diego/.fnm:$PATH

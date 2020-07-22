@@ -3,10 +3,6 @@
 [push]
 	default = simple
 [alias]
-	b = branch -a
-	c = checkout
-	f = fetch --prune
-	s = status
 	k = log --graph --oneline --decorate
 	l = log --graph --stat --decorate --patch
 [color]

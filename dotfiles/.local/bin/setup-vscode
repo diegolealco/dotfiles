@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+SOURCE="$HOME/.config/Code/User"
+DEST="$HOME/Library/Application Support/Code/User"
+EXTENSIONS_FILE="$SOURCE/extensions.txt"
+
+while read -r LINE; do
+    code --install-extension "$LINE"
+done < "$EXTENSIONS_FILE"
+
+[ "$(uname)" = "Darwin" ] && ln -fns "$SOURCE" "$DEST"
+

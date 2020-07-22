@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ "$(uname)" = "Darwin" ]
-then
-    mvim -v "$@"
-else
-    vim "$@"
-fi
-

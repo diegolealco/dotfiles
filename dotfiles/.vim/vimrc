@@ -122,15 +122,15 @@ elseif has('unix')
     set guifont=DejaVu\ Sans\ Mono\ 11
 endif
 
-if isdirectory($HOME.'/.vim_turds') == 0
-    call mkdir($HOME.'/.vim_turds/swap', 'p')
-    call mkdir($HOME.'/.vim_turds/backup', 'p')
-    call mkdir($HOME.'/.vim_turds/undo', 'p')
+if isdirectory($HOME.'/.cache/vim') == 0
+    call mkdir($HOME.'/.cache/vim/swap', 'p')
+    call mkdir($HOME.'/.cache/vim/backup', 'p')
+    call mkdir($HOME.'/.cache/vim/undo', 'p')
 endif
 
-set directory=~/.vim_turds/swap//
-set backupdir=~/.vim_turds/backup//
-set undodir=~/.vim_turds/undo//
+set directory=~/.cache/vim/swap//
+set backupdir=~/.cache/vim/backup//
+set undodir=~/.cache/vim/undo//
 set noswapfile
 set backup
 set nowritebackup

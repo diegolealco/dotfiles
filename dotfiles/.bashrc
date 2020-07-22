@@ -89,3 +89,5 @@ export PATH="$HOME/workspace/monorepo/bin:$PATH"
 export PATH=/home/diego/.fnm:$PATH
 eval "`fnm env --multi`"
 
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

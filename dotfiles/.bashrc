@@ -75,8 +75,6 @@ alias bc="bc -l"
 alias free="free -m"
 alias tree="tree -FC"
 alias cd..="cd .."
-alias ..="cd .."
-alias bashrc="vi $HOME/.bashrc && . $HOME/.bashrc"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -88,6 +86,5 @@ export PATH="$HOME/.local/bin:$PATH"
 # fnm
 export PATH=/home/diego/.fnm:$PATH
 eval "`fnm env --multi`"
-
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

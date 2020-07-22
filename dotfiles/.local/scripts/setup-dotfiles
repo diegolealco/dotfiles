@@ -1,0 +1,17 @@
+#!/bin/bash
+
+set -Eeuo pipefail
+
+REMOTE="git@github.com:diegolealco/dotfiles.git"
+BARE_DIR="$HOME/.dotfiles"
+TMP="/tmp/dotfiles"
+
+[ -d "$BARE_DIR" ] && exit 1
+
+git clone --separate-git-dir="$BARE_DIR" "$REMOTE" "$TMP"
+rsync --recursive --verbose --exclude ".git" "$TMP" "$HOME/"
+rm --recursive "$TMP"
+
+alias dotfiles="git --git-dir=$BARE_DIR/ --work-tree=$HOME"
+dotfiles config status.showUntrackedFiles no
+

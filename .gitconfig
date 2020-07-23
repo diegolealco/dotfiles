@@ -1,11 +1,12 @@
-[user]
-	useConfigOnly = true
 [push]
-	default = simple
+    default = simple
 [alias]
-	k = log --graph --oneline --decorate
-	l = log --graph --stat --decorate --patch
+    k = log --graph --oneline --decorate
+    l = log --graph --stat --decorate --patch
 [color]
-	ui = auto
+    ui = auto
 [pull]
-	rebase = false
+    rebase = false
+[user]
+    email = code@diegoleal.co
+    name = Diego Leal

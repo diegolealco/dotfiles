@@ -5,8 +5,6 @@ ZSH_THEME="robbyrussell"
 
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
-  PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-  PATH="$(brew --prefix)/opt/findutils/libexec/gnubin:$PATH"
   chmod go-w "$(brew --prefix)/share"
   autoload -Uz compinit
   compinit
@@ -18,12 +16,12 @@ source $ZSH/oh-my-zsh.sh
 # USER CONFIGURATION
 
 if [[ "$(uname)" = "Darwin" ]]; then
-  alias vim="nvim -v"
+  alias vim="mvim -v"
   MANPATH="/usr/local/man:$MANPATH"
 fi
 
 alias la="ls -lAh"
-alias config="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 EDITOR='vim'
 VISIAL="vim"

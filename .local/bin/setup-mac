@@ -8,7 +8,7 @@ do
   brew cask install "$CASK"
 done
 
-FORMULAE="wget coreutils findutils curl git ack tree stow the_silver_searcher openssl htop ranger mosh cmus mpv youtube-dl Schniz/tap/fnm tmux"
+FORMULAE="curl git tree openssl htop ranger mosh cmus mpv youtube-dl Schniz/tap/fnm tmux"
 
 for FORMULA in $FORMULAE
 do

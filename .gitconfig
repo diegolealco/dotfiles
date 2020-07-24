@@ -8,5 +8,5 @@
 [pull]
     rebase = false
 [user]
-    email = code@diegoleal.co
-    name = Diego Leal
+	email = code@diegoleal.co
+	name = Diego Leal

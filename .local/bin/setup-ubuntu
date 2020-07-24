@@ -26,10 +26,8 @@ apt install -y \
   inkscape \
   aria2 \
   git \
-  stow \
   tree \
   htop \
-  ranger \
   gufw \
   vim-gtk \
   curl \
@@ -37,7 +35,6 @@ apt install -y \
   cmus \
   mpv \
   libreoffice \
-  steam \
   ubuntu-restricted-extras \
   simple-scan \
   typecatcher \
@@ -47,7 +44,6 @@ apt install -y \
   kazam \
   mosh \
   gddrescue \
-  tmux \
   gnome-shell-extension-no-annoyance \
   gnome-shell-extension-disconnect-wifi \
   gnome-shell-extension-caffeine \

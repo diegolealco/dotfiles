@@ -4,6 +4,7 @@ bierner.markdown-preview-github-styles
 CoenraadS.bracket-pair-colorizer-2
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
+esbenp.prettier-vscode
 humao.rest-client
 jeff-hykin.better-dockerfile-syntax
 jpoissonnier.vscode-styled-components
@@ -11,6 +12,8 @@ letrieu.expand-region
 ms-azuretools.vscode-docker
 ms-python.python
 octref.vetur
+perragnaredin.light-plus-tweaked
+ritwickdey.LiveServer
 silvenon.mdx
 tht13.python
 waderyan.gitblame

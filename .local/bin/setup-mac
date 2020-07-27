@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # adoptopenjdk is required by dbeaver
-CASKS="firefox google-chrome gpg-suite-no-mail postman spotify transmission iterm2 slack dbeaver-community adoptopenjdk chromedriver bitwarden scroll-reverser 1password rectangle macs-fan-control virtualbox virtualbox-extension-pack"
+CASKS="firefox google-chrome gpg-suite-no-mail postman spotify transmission iterm2 slack dbeaver-community adoptopenjdk chromedriver bitwarden scroll-reverser 1password rectangle macs-fan-control virtualbox virtualbox-extension-pack visual-studio-code"
 
 for CASK in $CASKS
 do
   brew cask install "$CASK"
 done
 
-FORMULAE="wget curl git tree openssl htop mosh cmus mpv youtube-dl"
+FORMULAE="Schniz/tap/fnm macvim wget curl git tree openssl htop mosh cmus mpv youtube-dl"
 
 for FORMULA in $FORMULAE
 do

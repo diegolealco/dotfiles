@@ -13,6 +13,7 @@ done < "$EXTENSIONS_FILE"
 
 if [ "$(uname)" = "Darwin" ]
 then
+    [ -e "$DEST" ] && rm -rf "$DEST"
     ln -fns "$SOURCE" "$DEST"
 fi
 

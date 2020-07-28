@@ -1,19 +1,9 @@
 // Place your key bindings in this file to override the defaults
 [
   {
-    "key": "alt+up",
-    "command": "expand_region",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+w",
     "command": "-expand_region",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "alt+down",
-    "command": "undo_expand_region",
-    "when": "editorHasSelection && editorTextFocus"
   },
   {
     "key": "ctrl+shift+w",
@@ -26,8 +16,26 @@
     "when": "editorTextFocus && !editorReadonly"
   },
   {
+    "key": "alt+down",
+    "command": "undo_expand_region",
+    "when": "editorHasSelection && editorTextFocus"
+  },
+  {
     "key": "alt+up",
     "command": "-editor.action.moveLinesUpAction",
     "when": "editorTextFocus && !editorReadonly"
-  }
+  },
+  {
+    "key": "alt+up",
+    "command": "expand_region",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "editor.action.joinLines"
+  },
 ]

@@ -6,13 +6,11 @@ SOURCE="$HOME/.config/Code/User"
 DEST="$HOME/Library/Application Support/Code/User"
 EXTENSIONS_FILE="$SOURCE/extensions.txt"
 
-while read -r LINE
-do
+while read -r LINE; do
     code --install-extension "$LINE"
 done < "$EXTENSIONS_FILE"
 
-if [ "$(uname)" = "Darwin" ]
-then
+if [ "$(uname)" = "Darwin" ]; then
     [ -e "$DEST" ] && rm -rf "$DEST"
     ln -fns "$SOURCE" "$DEST"
 fi

@@ -10,7 +10,6 @@ snap install spotify
 snap install youtube-dl
 snap install dbeaver-ce
 snap install bitwarden
-snap install ncdu
 
 apt update
 apt dist-upgrade -y
@@ -32,7 +31,6 @@ apt install -y \
   vim-gtk \
   curl \
   wget \
-  cmus \
   mpv \
   libreoffice \
   ubuntu-restricted-extras \
@@ -40,7 +38,6 @@ apt install -y \
   typecatcher \
   tlp \
   tlp-rdw \
-  bleachbit \
   kazam \
   mosh \
   gddrescue \

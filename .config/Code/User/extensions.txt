@@ -16,6 +16,7 @@ octref.vetur
 perragnaredin.light-plus-tweaked
 ritwickdey.LiveServer
 silvenon.mdx
+sirmspencer.vscode-autohide
 tchayen.markdown-links
 tht13.python
 waderyan.gitblame

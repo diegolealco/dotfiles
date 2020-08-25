@@ -4,6 +4,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_MAGIC_FUNCTIONS="true"
 
 if type brew &>/dev/null; then
+  PATH="/usr/local/opt/python@3.7/bin:$PATH"
   FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
   chmod go-w "$(brew --prefix)/share"
   autoload -Uz compinit
@@ -21,7 +22,7 @@ if [[ "$(uname)" = "Darwin" ]]; then
 fi
 
 alias la="ls -lAh"
-alias dit="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 EDITOR='vim'
 VISIAL="vim"
@@ -30,8 +31,8 @@ PATH="$HOME/.local/bin:$PATH"
 
 # export WORKON_HOME="$HOME/.virtualenvs"
 # export PROJECT_HOME="$HOME/workspace"
-# export VIRTUALENVWRAPPER_PYTHON="/Library/Frameworks/Python.framework/Versions/3.7/bin/python3"
-# source "/Library/Frameworks/Python.framework/Versions/3.7/bin/virtualenvwrapper.sh"
+# export VIRTUALENVWRAPPER_PYTHON="/usr/local/opt/python@3.7/bin/python3.7"
+# source "/usr/local/bin/virtualenvwrapper.sh"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "`fnm env --multi`"

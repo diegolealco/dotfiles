@@ -40,8 +40,9 @@
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "editor.fontFamily": "SF Mono, Consolas, Liberation Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 100,
-  "workbench.colorTheme": "Dark+ Tweaked"
+  "workbench.colorTheme": "Dark+ Tweaked",
+  "editor.fontFamily": "SF Mono, Consolas, Liberation Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 }

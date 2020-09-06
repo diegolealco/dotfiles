@@ -8,7 +8,6 @@ if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
   chmod go-w "$(brew --prefix)/share"
   autoload -Uz compinit
-  compinit
 fi
 
 plugins=(git)
@@ -22,7 +21,6 @@ if [[ "$(uname)" = "Darwin" ]]; then
 fi
 
 alias la="ls -lAh"
-alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 EDITOR='vim'
 VISIAL="vim"

@@ -30,7 +30,6 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.customMenuBarAltFocus": false,
   "window.menuBarVisibility": "toggle",
-  "window.zoomLevel": 0,
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
   "eslint.format.enable": true,
@@ -43,5 +42,12 @@
   "editor.fontFamily": "SF Mono, Consolas, Liberation Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 100,
-  "workbench.colorTheme": "Dark+ Tweaked"
+  "workbench.colorTheme": "Dark+ Tweaked",
+  "diffEditor.renderSideBySide": false,
+  "editor.fontSize": 13,
+  "editor.lineHeight": 22,
+  "window.zoomLevel": 1,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
 }

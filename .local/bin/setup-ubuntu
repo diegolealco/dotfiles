@@ -20,9 +20,6 @@ apt install -y \
   gconf2 \
   dconf-editor \
   gnome-tweak-tool \
-  gimp \
-  gimp-plugin-registry \
-  inkscape \
   aria2 \
   git \
   tree \
@@ -31,8 +28,6 @@ apt install -y \
   vim-gtk \
   curl \
   wget \
-  mpv \
-  libreoffice \
   ubuntu-restricted-extras \
   simple-scan \
   typecatcher \
@@ -45,9 +40,7 @@ apt install -y \
   gnome-shell-extension-disconnect-wifi \
   gnome-shell-extension-caffeine \
   gnome-shell-extension-bluetooth-quick-connect \
-  gnome-shell-extension-prefs \
-  gnome-shell-extension-impatience \
-  gnome-shell-extension-disconnect-wifi
+  gnome-shell-extension-prefs
 
 systemctl enable tlp
 tlp start

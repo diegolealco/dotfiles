@@ -80,7 +80,10 @@ set wildcharm=<C-z>
 set wildignorecase
 set wildmenu
 set wildmode=list:full
-set wildignore=*/node_modules/*,*/__pycache__/,*/venv/*,*/.log,*.gif,*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.jpg,*.png,*.bmp,*.ico,*.pdf,*.psd,*.swp,*.bak,*.tar.*,*.zip,*.so,*.sln,*.Master,*.csproj,*.csproj.user,*.min.*
+set wildignore=*/node_modules/*,*/bower_components/*,*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=,*/tmp/*,*.jpg,*.png,*.bmp,*.gif,*.ico,*.pdf,*.psd,*.swp,*.bak
+set wildignore+=,*.tar.*,*.zip,*.so,*.pyc,*.sln,*.Master,*.csproj,*.csproj.user
+set wildignore+=,*.exe,*.dll,*.pdb,*.min.*,*.cache,*.class
 
 set autoindent
 set expandtab

@@ -45,7 +45,6 @@
   "diffEditor.renderSideBySide": false,
   "editor.fontSize": 13,
   "editor.lineHeight": 22,
-  "window.zoomLevel": 1,
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },

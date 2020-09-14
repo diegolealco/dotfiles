@@ -2,10 +2,11 @@ let $VIMHOME=expand('<sfile>:p:h:h')
 let g:gitgutter_map_keys = 0
 let g:windowswap_map_keys = 0
 let g:ale_fixers = {
-\   'javascript': ['prettier', 'eslint'],
-\   'javascriptreact': ['prettier', 'eslint'],
-\   'typescript': ['prettier', 'eslint'],
-\   'typescriptreact': ['prettier', 'eslint'],
+\   'javascript': ['eslint'],
+\   'javascriptreact': ['eslint'],
+\   'typescript': ['eslint'],
+\   'typescriptreact': ['eslint'],
+\   'vue': ['eslint'],
 \   'python': ['flake8']
 \}
 let g:ale_completion_enabled = 1
@@ -56,7 +57,7 @@ set backspace=indent,eol,start
 set belloff=all
 set clipboard^=unnamedplus,unnamed
 set complete-=i
-set completeopt=longest,menuone,menu
+set completeopt=menu,menuone,preview,noselect,noinsert
 set omnifunc=syntaxcomplete#Complete
 set confirm
 set display=truncate
@@ -87,10 +88,7 @@ set wildcharm=<C-z>
 set wildignorecase
 set wildmenu
 set wildmode=list:full
-set wildignore=*/node_modules/*,*/bower_components/*,*/.git/*,*/.hg/*,*/.svn/*
-set wildignore+=,*/tmp/*,*.jpg,*.png,*.bmp,*.gif,*.ico,*.pdf,*.psd,*.swp,*.bak
-set wildignore+=,*.tar.*,*.zip,*.so,*.pyc,*.sln,*.Master,*.csproj,*.csproj.user
-set wildignore+=,*.exe,*.dll,*.pdb,*.min.*,*.cache,*.class
+set wildignore=*/node_modules/*,*/bower_components/*,*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.jpg,*.png,*.bmp,*.gif,*.ico,*.pdf,*.psd,*.swp,*.bak,*.tar.*,*.zip,*.so,*.pyc,*.sln,*.Master,*.csproj,*.csproj.user,*.exe,*.dll,*.pdb,*.min.*,*.cache,*.class
 
 set autoindent
 set expandtab
@@ -195,6 +193,7 @@ nnoremap [h :GitGutterPrevHunk<CR>
 
 nnoremap <Space>a :ALEFix<CR>
 nnoremap <Space>f :FZF<CR>
+nnoremap <Space>b :ls<CR>:b<Space>
 nnoremap <Space>l :nohlsearch<C-r>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-l>
 nnoremap <Space>s :%s///gc<Left><Left><Left>
 nnoremap <Space>g :Goyo<CR>

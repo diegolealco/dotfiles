@@ -5,6 +5,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories = [$VIMHOME.'/.vim/skel/']
 let g:UltiSnipsSnippetsDir = $VIMHOME.'/.vim/skel/'
+let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
@@ -49,6 +50,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
+Plug 'agude/vim-eldar'
 call plug#end()
 
 filetype plugin indent on
@@ -127,15 +129,16 @@ set t_Co=256
 set t_ut=
 set background=dark
 colorscheme jellybeans
+
 syntax enable
 
 set guioptions=cm
-set linespace=1
+set linespace=2
 
 if has('win32')
     set guifont=Consolas:h12:cANSI:qDRAFT
 elseif has('mac')
-    set guifont=Source\ Code\ Pro:h14
+    set guifont=SFMono-Regular:h12
 elseif has('unix')
     set guifont=DejaVu\ Sans\ Mono\ 11
 endif

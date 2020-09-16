@@ -7,5 +7,7 @@ youtube-dl \
   --extract-audio \
   --audio-format "mp3" \
   --audio-quality 0 \
+  --download-archive 'archive.txt' \
+  --write-thumbnail \
   --embed-thumbnail \
   $@

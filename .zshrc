@@ -21,6 +21,7 @@ if [[ "$(uname)" = "Darwin" ]]; then
 fi
 
 alias la="ls -lAh"
+alias gamma="xrandr --output eDP-1 --gamma 0.8:0.8:0.8"
 
 EDITOR='vim'
 VISIAL="vim"

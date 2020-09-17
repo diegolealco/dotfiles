@@ -43,11 +43,13 @@
   "editor.wordWrapColumn": 100,
   "workbench.colorTheme": "Dark+ Tweaked",
   "diffEditor.renderSideBySide": false,
-  "editor.fontSize": 13,
   "editor.lineHeight": 22,
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "editor.fontFamily": "SF Mono, Consolas, DejaVu Sans Mono, Menlo, Monaco, 'Courier New', monospace",
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "editor.fontFamily": "DejaVu Sans Mono",
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.fontWeight": "bold",
+  "window.zoomLevel": 0,
+  "editor.fontSize": 13
 }

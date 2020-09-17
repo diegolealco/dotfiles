@@ -174,16 +174,9 @@ augroup fix_tsx_syntax
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 augroup END
 
-
 augroup dont_open_buffers_on_nerdtree_win
     autocmd!
     autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
-augroup END
-
-
-augroup exit_when_last_win_is_nerd
-    autocmd!
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 augroup END
 
 function ToggleNERDTree()

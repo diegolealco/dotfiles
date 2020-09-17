@@ -47,9 +47,9 @@
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "editor.fontFamily": "DejaVu Sans Mono",
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.fontWeight": "bold",
   "window.zoomLevel": 0,
-  "editor.fontSize": 13
+  "editor.fontSize": 13,
+  "editor.fontFamily": "Consolas, DejaVu Sans Mono, Menlo, Monaco"
 }

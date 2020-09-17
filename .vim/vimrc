@@ -5,7 +5,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories = [$VIMHOME.'/.vim/skel/']
 let g:UltiSnipsSnippetsDir = $VIMHOME.'/.vim/skel/'
-let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
@@ -24,6 +23,7 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = ''
 let g:gitgutter_map_keys = 0
 let g:windowswap_map_keys = 0
+let g:plug_window = 'noautocmd vertical topleft new'
 
 if executable('ag')
     let g:ctrlp_user_command = 'ag %s --files-with-matches --nocolor --nogroup --hidden -g ""'
@@ -37,7 +37,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'mattn/emmet-vim'
 Plug 'moll/vim-bbye'
 Plug 'nanotech/jellybeans.vim'
-Plug 'justinmk/vim-dirvish'
+Plug 'preservim/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'sirver/ultisnips'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
@@ -174,6 +174,28 @@ augroup fix_tsx_syntax
     autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 augroup END
 
+
+augroup dont_open_buffers_on_nerdtree_win
+    autocmd!
+    autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+augroup END
+
+
+augroup exit_when_last_win_is_nerd
+    autocmd!
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+augroup END
+
+function ToggleNERDTree()
+    if filereadable(expand('%'))
+        NERDTreeFind
+    else
+        NERDTreeToggle
+    endif
+endfunction
+
+nnoremap - :call ToggleNERDTree()<CR>
+
 nnoremap <F1> <Nop>
 vnoremap <F1> <Nop>
 inoremap <F1> <Nop>
@@ -203,6 +225,7 @@ nnoremap vv ^vg_
 cnoremap bd Bdelete
 nnoremap ]h :GitGutterNextHunk<CR>
 nnoremap [h :GitGutterPrevHunk<CR>
+nnoremap <Backspace> <C-^>
 
 nnoremap <Space>a :ALEFix<CR>
 nnoremap <Space>b :CtrlPBuffer<CR>

@@ -48,6 +48,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "editor.fontFamily": "SF Mono, Consolas, Liberation Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "SF Mono, Consolas, DejaVu Sans Mono, Menlo, Monaco, 'Courier New', monospace",
   "editor.defaultFormatter": "dbaeumer.vscode-eslint"
 }

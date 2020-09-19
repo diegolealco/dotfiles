@@ -46,9 +46,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.fontWeight": "bold",
-  "window.zoomLevel": 0,
   "editor.fontFamily": "DejaVu Sans Mono, Consolas, Menlo, Monaco",
   "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "material-icon-theme"

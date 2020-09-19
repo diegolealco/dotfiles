@@ -20,14 +20,12 @@ apt install -y \
   gconf2 \
   dconf-editor \
   gnome-tweak-tool \
-  aria2 \
   git \
   tree \
   htop \
   gufw \
-  vim-gtk \
+  vim \
   curl \
-  wget \
   ubuntu-restricted-extras \
   simple-scan \
   typecatcher \
@@ -36,6 +34,7 @@ apt install -y \
   kazam \
   mosh \
   gddrescue \
+  transmission \
   gnome-shell-extension-no-annoyance \
   gnome-shell-extension-disconnect-wifi \
   gnome-shell-extension-caffeine \

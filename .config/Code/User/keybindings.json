@@ -1,35 +1,5 @@
 [
   {
-    "key": "ctrl+w",
-    "command": "-expand_region",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+shift+w",
-    "command": "-undo_expand_region",
-    "when": "editorHasSelection && editorTextFocus"
-  },
-  {
-    "key": "alt+down",
-    "command": "-editor.action.moveLinesDownAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+down",
-    "command": "undo_expand_region",
-    "when": "editorHasSelection && editorTextFocus"
-  },
-  {
-    "key": "alt+up",
-    "command": "-editor.action.moveLinesUpAction",
-    "when": "editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "alt+up",
-    "command": "expand_region",
-    "when": "editorTextFocus"
-  },
-  {
     "key": "ctrl+j",
     "command": "-workbench.action.togglePanel"
   },
@@ -44,5 +14,9 @@
   {
     "key": "ctrl+y",
     "command": "editor.emmet.action.expandAbbreviation"
+  },
+  {
+    "key": "ctrl+shift+\\",
+    "command": "workbench.action.splitEditorOrthogonal"
   }
 ]

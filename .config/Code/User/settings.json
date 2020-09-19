@@ -41,7 +41,6 @@
   },
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 100,
-  "workbench.colorTheme": "Dark+ Tweaked",
   "diffEditor.renderSideBySide": false,
   "editor.lineHeight": 22,
   "[javascript]": {
@@ -50,6 +49,7 @@
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.fontWeight": "bold",
   "window.zoomLevel": 0,
-  "editor.fontSize": 13,
-  "editor.fontFamily": "DejaVu Sans Mono,Consolas, Menlo, Monaco"
+  "editor.fontFamily": "DejaVu Sans Mono, Consolas, Menlo, Monaco",
+  "workbench.colorTheme": "Tokyo Night",
+  "workbench.iconTheme": "material-icon-theme"
 }

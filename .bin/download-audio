@@ -3,11 +3,12 @@
 youtube-dl \
   --add-metadata \
   --ignore-errors \
-  --output "%(uploader)s/%(upload_date)s %(title)s (%(duration)ss).%(ext)s" \
+  --output "$HOME/Music/%(uploader)s/%(upload_date)s %(title)s (%(duration)ss).%(ext)s" \
   --extract-audio \
   --audio-format "mp3" \
   --audio-quality 0 \
-  --download-archive 'archive.txt' \
+  --download-archive "$HOME/Music/archive.txt" \
   --write-thumbnail \
   --embed-thumbnail \
+  --restrict-filenames \
   $@

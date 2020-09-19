@@ -5,7 +5,8 @@ youtube-dl \
   --ignore-errors \
   --format 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/bestvideo+bestaudio' \
   --merge-output-format 'mp4' \
-  --output '%(upload_date)s - %(title)s.%(ext)s' \
+  --output "$HOME/Videos/%(uploader)s/%(upload_date)s %(title)s.%(ext)s" \
   --embed-thumbnail \
-  --download-archive 'archive.txt' \
+  --download-archive "$HOME/Videos/archive.txt" \
+  --restrict-filenames \
   $@

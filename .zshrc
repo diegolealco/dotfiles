@@ -27,7 +27,7 @@ fi
 alias la="ls -lAh"
 export EDITOR='code'
 export VISUAL="code"
-export PATH="$HOME/.local/bin:$HOME/.fnm:$PATH"
+export PATH="$HOME/.bin:$HOME/.fnm:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "`fnm env --multi`"

@@ -1,24 +1,5 @@
-.config/Code/Crash Reports/
-.config/Code/Local Storage/
-.config/Code/exthost Crash Reports/
-.config/Code/CachedExtensionVSIXs/
-.config/Code/logs/
-.config/Code/machineid
-.config/Code/Backups/
-.config/Code/Cache/
-.config/Code/CachedData/
-.config/Code/CachedExtensions/
-.config/Code/Code Cache/
-.config/Code/Cookies
-.config/Code/Cookies-journal
-.config/Code/GPUCache/
-.config/Code/Network Persistent State
-.config/Code/Session Storage/
-.config/Code/TransportSecurity
-.config/Code/User/globalStorage/
+.config/Code/*
+!.config/Code/User
+!.config/Code/User/*
 .config/Code/User/workspaceStorage/
-.config/Code/languagepacks.json
-.config/Code/rapid_render.json
-.config/Code/storage.json
-.config/Code/.org.chromium.Chromium.90cC7I
-.vim/plugged/
+.config/Code/User/globalStorage/

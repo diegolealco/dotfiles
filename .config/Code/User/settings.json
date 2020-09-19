@@ -51,5 +51,5 @@
   "editor.fontWeight": "bold",
   "window.zoomLevel": 0,
   "editor.fontSize": 13,
-  "editor.fontFamily": "Consolas, DejaVu Sans Mono, Menlo, Monaco"
+  "editor.fontFamily": "DejaVu Sans Mono,Consolas, Menlo, Monaco"
 }

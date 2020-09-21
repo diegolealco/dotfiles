@@ -6,7 +6,6 @@ dbaeumer.vscode-eslint
 donjayamanne.githistory
 enkia.tokyo-night
 esbenp.prettier-vscode
-firsttris.vscode-jest-runner
 jeff-hykin.better-dockerfile-syntax
 jpoissonnier.vscode-styled-components
 kortina.vscode-markdown-notes

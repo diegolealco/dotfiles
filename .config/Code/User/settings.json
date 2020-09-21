@@ -1,18 +1,8 @@
 {
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.formatOnSave": false,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": true,
   "files.exclude": {
@@ -33,22 +23,19 @@
   "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
   "eslint.format.enable": true,
-  "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 100,
   "diffEditor.renderSideBySide": false,
   "editor.lineHeight": 22,
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "editor.fontWeight": "bold",
-  "editor.fontFamily": "DejaVu Sans Mono, Consolas, Menlo, Monaco",
+  "editor.fontWeight": "600",
+  "editor.fontFamily": "Source Code Pro, Consolas, Menlo, Monaco, Dejavu Sans Mono",
   "workbench.colorTheme": "Tokyo Night",
   "workbench.iconTheme": "material-icon-theme",
-  "breadcrumbs.enabled": false
+  "breadcrumbs.enabled": false,
+  "terminal.integrated.fontWeight": "600",
+  "window.zoomLevel": 0,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true
 }

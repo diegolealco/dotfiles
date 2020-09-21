@@ -16,6 +16,7 @@ msjsdiag.debugger-for-chrome
 octref.vetur
 PKief.material-icon-theme
 ritwickdey.LiveServer
+sharat.vscode-brewfile
 silvenon.mdx
 tchayen.markdown-links
 waderyan.gitblame

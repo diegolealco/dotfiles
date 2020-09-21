@@ -4,7 +4,7 @@
 	k = log --graph --oneline --decorate
 	l = log --graph --stat --decorate --patch
 [color]
-	ui = auto
+	ui = true
 [pull]
 	rebase = false
 [user]
@@ -12,4 +12,17 @@
 	name = Diego Leal
 [core]
 	editor = code --wait
+	pager = diff-so-fancy | less --tabs=4 -RFX
 
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 11
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

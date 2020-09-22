@@ -27,15 +27,15 @@
   "editor.wordWrapColumn": 100,
   "diffEditor.renderSideBySide": false,
   "editor.lineHeight": 22,
-  "editor.fontWeight": "600",
-  "editor.fontFamily": "Source Code Pro, Consolas, Menlo, Monaco, Dejavu Sans Mono",
-  "workbench.colorTheme": "Tokyo Night",
-  "workbench.iconTheme": "material-icon-theme",
-  "breadcrumbs.enabled": false,
-  "terminal.integrated.fontWeight": "600",
-  "window.zoomLevel": 0,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "terminal.integrated.fontWeight": "bold",
+  "editor.fontWeight": "bold",
+  "editor.fontFamily": "Source Code Pro, Consolas, Menlo, Monaco, Dejavu Sans Mono",
+  "workbench.iconTheme": "material-icon-theme",
+  "breadcrumbs.enabled": false,
+  "workbench.colorTheme": "Tokyo Night",
+  "window.zoomLevel": 0
 }

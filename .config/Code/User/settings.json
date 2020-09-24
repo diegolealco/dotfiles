@@ -31,8 +31,10 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
+  "editor.fontFamily": "Consolas, Menlo, Monaco, Dejavu Sans Mono",
   "workbench.iconTheme": "material-icon-theme",
   "breadcrumbs.enabled": false,
-  "workbench.colorTheme": "Tokyo Night",
-  "window.zoomLevel": 0
+  "window.zoomLevel": 0,
+  "editor.fontSize": 13,
+  "workbench.colorTheme": "Tokyo Night"
 }

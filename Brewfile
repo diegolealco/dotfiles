@@ -19,6 +19,8 @@ cask "scroll-reverser"
 cask "vlc"
 cask "unison"
 cask "digikam"
+cask "handbrake"
+
 
 brew "Schniz/tap/fnm"
 brew "macvim"

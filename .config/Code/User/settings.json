@@ -1,9 +1,9 @@
 {
   "diffEditor.ignoreTrimWhitespace": false,
-  "editor.minimap.enabled": true,
+  "editor.minimap.enabled": false,
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
-  "explorer.confirmDelete": false,
+  "explorer.confirmDelete": true,
   "explorer.confirmDragAndDrop": true,
   "files.exclude": {
     "**/node_modules": true
@@ -26,15 +26,17 @@
   "editor.wordWrap": "on",
   "editor.wordWrapColumn": 100,
   "diffEditor.renderSideBySide": false,
-  "editor.lineHeight": 22,
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.formatOnSave": true,
-  "editor.fontFamily": "Consolas, Menlo, Monaco, Dejavu Sans Mono",
   "workbench.iconTheme": "material-icon-theme",
   "breadcrumbs.enabled": false,
   "window.zoomLevel": 0,
-  "editor.fontSize": 13,
-  "workbench.colorTheme": "Tokyo Night"
+  "workbench.colorTheme": "Dracula",
+  "editor.fontSize": 14,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.fontSize": 13
 }

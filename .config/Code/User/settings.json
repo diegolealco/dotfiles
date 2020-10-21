@@ -18,9 +18,6 @@
   "terminal.integrated.rendererType": "dom",
   "terminal.integrated.scrollback": 10000,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "window.customMenuBarAltFocus": false,
-  "window.menuBarVisibility": "toggle",
-  "workbench.sideBar.location": "left",
   "workbench.startupEditor": "newUntitledFile",
   "eslint.format.enable": true,
   "editor.wordWrap": "on",
@@ -29,10 +26,6 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.formatOnSave": true,
-  "breadcrumbs.enabled": true,
-  "window.zoomLevel": 0,
-  "workbench.colorTheme": "Default Light+",
   "editor.fontSize": 13,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -46,5 +39,12 @@
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "workbench.colorTheme": "Default Light+",
+  "workbench.editor.showTabs": false
 }

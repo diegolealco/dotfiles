@@ -45,6 +45,5 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "workbench.colorTheme": "Default Light+",
-  "workbench.editor.showTabs": false
+  "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace"
 }

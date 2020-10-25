@@ -18,5 +18,10 @@
   {
     "key": "ctrl+shift+\\",
     "command": "workbench.action.splitEditorOrthogonal"
+  },
+  {
+    "key": "shift+cmd+r",
+    "command": "editor.action.refactor",
+    "when": "editorTextFocus"
   }
 ]

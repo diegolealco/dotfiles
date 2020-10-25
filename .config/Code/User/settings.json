@@ -45,5 +45,8 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace",
+  "breadcrumbs.enabled": false,
+  "workbench.editor.showTabs": false,
+  "editor.snippetSuggestions": "top"
 }

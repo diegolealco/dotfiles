@@ -3,7 +3,7 @@ batisteo.vscode-django
 bierner.markdown-preview-github-styles
 CoenraadS.bracket-pair-colorizer-2
 dbaeumer.vscode-eslint
-donjayamanne.githistory
+eamodio.gitlens
 esbenp.prettier-vscode
 jeff-hykin.better-dockerfile-syntax
 jpoissonnier.vscode-styled-components
@@ -13,5 +13,4 @@ msjsdiag.debugger-for-chrome
 octref.vetur
 sharat.vscode-brewfile
 silvenon.mdx
-waderyan.gitblame
 wmaurer.change-case

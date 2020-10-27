@@ -26,7 +26,7 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.fontSize": 13,
+  "editor.fontSize": 14,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -47,6 +47,5 @@
   "editor.formatOnSave": true,
   "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace",
   "breadcrumbs.enabled": false,
-  "workbench.editor.showTabs": false,
   "editor.snippetSuggestions": "top"
 }

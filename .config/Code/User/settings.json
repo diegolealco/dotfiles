@@ -47,5 +47,6 @@
   "editor.formatOnSave": true,
   "editor.fontFamily": "SF Mono, Menlo, Monaco, 'Courier New', monospace",
   "breadcrumbs.enabled": false,
-  "editor.snippetSuggestions": "top"
+  "editor.snippetSuggestions": "top",
+  "window.zoomLevel": 0
 }

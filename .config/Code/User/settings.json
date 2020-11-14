@@ -36,5 +36,6 @@
   "window.zoomLevel": 0,
   "editor.lineHeight": 22,
   "editor.fontSize": 13,
-  "terminal.integrated.lineHeight": 1.2
+  "terminal.integrated.lineHeight": 1.2,
+  "workbench.colorTheme": "GitHub Dark"
 }

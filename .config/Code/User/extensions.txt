@@ -5,10 +5,12 @@ CoenraadS.bracket-pair-colorizer-2
 dbaeumer.vscode-eslint
 eamodio.gitlens
 esbenp.prettier-vscode
+GitHub.github-vscode-theme
 jeff-hykin.better-dockerfile-syntax
 jpoissonnier.vscode-styled-components
 ms-azuretools.vscode-docker
 ms-python.python
+ms-toolsai.jupyter
 msjsdiag.debugger-for-chrome
 octref.vetur
 sharat.vscode-brewfile

@@ -20,7 +20,7 @@ cask "unison"
 cask "digikam"
 cask "handbrake"
 
-brew "Schniz/tap/fnm"
+brew "fnm"
 brew "macvim"
 brew "curl"
 brew "git"

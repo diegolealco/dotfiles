@@ -3,7 +3,7 @@
   "editor.minimap.enabled": false,
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
-  "explorer.confirmDelete": true,
+  "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": true,
   "files.exclude": {
     "**/node_modules": true

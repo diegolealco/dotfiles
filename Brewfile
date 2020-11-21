@@ -19,6 +19,7 @@ cask "vlc"
 cask "unison"
 cask "digikam"
 cask "handbrake"
+cask "whatsapp"
 
 brew "fnm"
 brew "macvim"

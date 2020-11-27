@@ -13,16 +13,3 @@
 [core]
 	editor = code --wait
 
-[color "diff-highlight"]
-	oldNormal = red 
-	oldHighlight = red 52
-	newNormal = green 
-	newHighlight = green 22
-
-[color "diff"]
-	meta = 11
-	frag = magenta
-	commit = yellow
-	old = red
-	new = green
-	whitespace = red reverse

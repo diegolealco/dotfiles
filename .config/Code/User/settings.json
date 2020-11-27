@@ -36,6 +36,5 @@
   "window.zoomLevel": 0,
   "editor.lineHeight": 22,
   "editor.fontSize": 13,
-  "terminal.integrated.lineHeight": 1.2,
-  "workbench.colorTheme": "Community Material Theme Darker High Contrast"
+  "terminal.integrated.lineHeight": 1.2
 }

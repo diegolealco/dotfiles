@@ -28,5 +28,5 @@ alias la="ls -lAh"
 export EDITOR='code'
 export VISUAL="code"
 export PATH="$HOME/.bin:$HOME/.fnm:$PATH"
-eval "`fnm env --multi`"
+eval "`fnm env`"
 

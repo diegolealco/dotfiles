@@ -3,14 +3,14 @@
   "editor.minimap.enabled": false,
   "editor.renderIndentGuides": false,
   "editor.tabSize": 2,
-  "explorer.confirmDelete": false,
+  "explorer.confirmDelete": true,
   "explorer.confirmDragAndDrop": true,
   "files.exclude": {
     "**/node_modules": true
   },
   "git.autofetch": true,
   "git.confirmSync": false,
-  "git.openDiffOnClick": false,
+  "git.openDiffOnClick": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "markdown.preview.lineHeight": 1.5,
   "telemetry.enableCrashReporter": false,
@@ -21,12 +21,11 @@
   "workbench.startupEditor": "newUntitledFile",
   "eslint.format.enable": true,
   "editor.wordWrap": "on",
-  "editor.wordWrapColumn": 100,
+  "editor.wordWrapColumn": 120,
   "diffEditor.renderSideBySide": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "breadcrumbs.enabled": false,
   "editor.snippetSuggestions": "top",
-  "editor.fontSize": 13,
-  "editor.lineHeight": 20,
+  "editor.fontSize": 13
 }

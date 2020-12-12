@@ -20,6 +20,7 @@ cask "unison"
 cask "digikam"
 cask "handbrake"
 cask "whatsapp"
+cask "telegram"
 
 brew "fnm"
 brew "macvim"
@@ -31,5 +32,4 @@ brew "htop"
 brew "mosh"
 brew "youtube-dl"
 brew "ffmpeg"
-brew "git-extras"
 

@@ -18,10 +18,10 @@ source $ZSH/oh-my-zsh.sh
 if [[ "$(uname)" = "Darwin" ]]; then
   alias vim="mvim -v"
   export MANPATH="/usr/local/man:$MANPATH"
-  # export WORKON_HOME="$HOME/.virtualenvs"
-  # export PROJECT_HOME="$HOME/workspace"
-  # export VIRTUALENVWRAPPER_PYTHON="/usr/local/opt/python@3.7/bin/python3.7"
-  # source "/usr/local/bin/virtualenvwrapper.sh"
+  export WORKON_HOME="$HOME/.virtualenvs"
+  export PROJECT_HOME="$HOME/workspace"
+  export VIRTUALENVWRAPPER_PYTHON="/usr/local/opt/python@3.7/bin/python3.7"
+  source "/usr/local/bin/virtualenvwrapper.sh"
 fi
 
 alias la="ls -lAh"

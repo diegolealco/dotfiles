@@ -1,13 +1,20 @@
 {
-  "diffEditor.ignoreTrimWhitespace": false,
+  "breadcrumbs.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "SF Mono, Consolas, Liberation Mono, Menlo, monospace",
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
   "editor.minimap.enabled": false,
   "editor.renderIndentGuides": false,
+  "editor.snippetSuggestions": "top",
   "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.wordWrapColumn": 120,
+  "eslint.format.enable": true,
   "explorer.confirmDelete": true,
   "explorer.confirmDragAndDrop": true,
-  "files.exclude": {
-    "**/node_modules": true
-  },
+  "files.exclude": { "**/node_modules": true },
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openDiffOnClick": true,
@@ -18,14 +25,6 @@
   "terminal.integrated.rendererType": "dom",
   "terminal.integrated.scrollback": 10000,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.startupEditor": "newUntitledFile",
-  "eslint.format.enable": true,
-  "editor.wordWrap": "on",
-  "editor.wordWrapColumn": 120,
-  "diffEditor.renderSideBySide": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "breadcrumbs.enabled": false,
-  "editor.snippetSuggestions": "top",
-  "editor.fontSize": 13
+  "workbench.colorTheme": "Monokai",
+  "workbench.startupEditor": "newUntitledFile"
 }

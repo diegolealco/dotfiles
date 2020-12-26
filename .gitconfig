@@ -1,8 +1,5 @@
 [push]
 	default = simple
-[alias]
-	k = log --graph --oneline --decorate
-	l = log --graph --stat --decorate --patch
 [color]
 	ui = true
 [pull]

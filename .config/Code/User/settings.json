@@ -2,7 +2,6 @@
   "breadcrumbs.enabled": false,
   "diffEditor.ignoreTrimWhitespace": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "SF Mono, Consolas, Liberation Mono, Menlo, monospace",
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.minimap.enabled": false,

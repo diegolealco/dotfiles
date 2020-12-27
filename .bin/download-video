@@ -10,3 +10,4 @@ youtube-dl \
   --download-archive "$HOME/Videos/archive.txt" \
   --restrict-filenames \
   $@
+

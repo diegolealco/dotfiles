@@ -13,10 +13,10 @@ cask "visual-studio-code"
 cask "scroll-reverser"
 cask "vlc"
 cask "unison"
-cask "digikam"
-cask "whatsapp"
 cask "telegram"
-
+cask "appcleaner"
+cask "brave-browser"
+ 
 brew "fnm"
 brew "macvim"
 brew "curl"

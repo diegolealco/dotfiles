@@ -1,3 +1,5 @@
+tap "homebrew/cask-fonts"
+
 cask "brave-browser"
 cask "google-chrome"
 cask "firefox"
@@ -15,6 +17,7 @@ cask "telegram"
 cask "appcleaner"
 cask "steam"
 cask "duplicati"
+cask "font-victor-mono"
  
 brew "fnm"
 brew "macvim"

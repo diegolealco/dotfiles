@@ -1,8 +1,0 @@
-#!/bin/bash
-
-if [ "$(uname)" = "Linux" ]; then
-    nohup xdg-open "$@" > "/tmp/nohup_vim.log" & disown
-else
-    open "$@"
-fi
-

@@ -1,0 +1,231 @@
+let $VIMHOME=expand('<sfile>:p:h:h')
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsSnippetDirectories = [$VIMHOME.'/.vim/skel/']
+let g:UltiSnipsSnippetsDir = $VIMHOME.'/.vim/skel/'
+let g:ale_completion_enabled = 1
+let g:ale_fixers = {
+\   'javascript': ['eslint'],
+\   'javascriptreact': ['eslint'],
+\   'typescript': ['eslint'],
+\   'typescriptreact': ['eslint'],
+\   'vue': ['eslint']
+\}
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = "--loglevel silent"
+let g:ctrlp_cache_dir = $HOME.'/.vim_turds/ctrlp'
+let g:ctrlp_map = '<space>f'
+let g:ctrlp_reuse_window = 'nofile'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = ''
+let g:gitgutter_map_keys = 0
+let g:windowswap_map_keys = 0
+let g:plug_window = 'noautocmd vertical topleft new'
+
+if executable('ag')
+    let g:ctrlp_user_command = 'ag %s --files-with-matches --nocolor --nogroup --hidden -g ""'
+    set grepprg=ag\ --nogroup\ --nocolor\ --hidden
+endif
+
+call plug#begin()
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mattn/emmet-vim'
+Plug 'moll/vim-bbye'
+Plug 'nanotech/jellybeans.vim'
+Plug 'preservim/nerdtree'
+Plug 'sheerun/vim-polyglot'
+Plug 'sirver/ultisnips'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'w0rp/ale'
+Plug 'wesQ3/vim-windowswap'
+Plug 'agude/vim-eldar'
+call plug#end()
+
+filetype plugin indent on
+
+set encoding=utf-8
+scriptencoding utf-8
+set fileencodings=ucs-bom,utf-8,default,latin1
+set fileformats=unix,dos,mac
+
+set history=200
+set sessionoptions-=options
+set viminfo^=!
+
+set autoread
+set backspace=indent,eol,start
+set belloff=all
+set clipboard^=unnamedplus,unnamed
+set complete-=i
+set completeopt=menu,menuone,preview,noselect,noinsert
+set omnifunc=syntaxcomplete#Complete
+set confirm
+set display=truncate
+set formatoptions+=j
+set hidden
+set laststatus=2
+set list
+set showbreak=↪\ 
+set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+set mouse=a
+set nostartofline
+set number
+set pastetoggle=<insert>
+set scrolloff=5
+set shortmess=xtI
+set showcmd
+set showmode
+set splitbelow
+set splitright
+set switchbuf=usetab
+set title
+set ttimeout
+set ttimeoutlen=100
+set ttyfast
+set winwidth=80
+
+set wildcharm=<C-z>
+set wildignorecase
+set wildmenu
+set wildmode=list:full
+set wildignore=*/node_modules/*,*/bower_components/*,*/.git/*,*/.hg/*,*/.svn/*,*/tmp/*,*.jpg,*.png,*.bmp,*.gif,*.ico,*.pdf,*.psd,*.swp,*.bak,*.tar.*,*.zip,*.so,*.pyc,*.sln,*.Master,*.csproj,*.csproj.user,*.exe,*.dll,*.pdb,*.min.*,*.cache,*.class
+
+set autoindent
+set expandtab
+set shiftround
+set shiftwidth=4
+set smarttab
+set softtabstop=4
+set tabstop=8
+
+set breakindent
+set linebreak
+set textwidth=0
+set wrap
+set wrapmargin=0
+
+set hlsearch
+set ignorecase
+set incsearch
+set smartcase
+
+if (empty($TMUX) && !has("termguicolors"))
+    set termguicolors
+endif
+
+set t_Co=256
+set t_ut=
+set background=dark
+colorscheme eldar
+
+syntax enable
+
+set guioptions=cm
+set linespace=2
+
+if has('win32')
+    set guifont=Consolas:h12:cANSI:qDRAFT
+elseif has('mac')
+    set guifont=SFMono-Regular:h12
+elseif has('unix')
+    set guifont=DejaVu\ Sans\ Mono\ 11
+endif
+
+if isdirectory($HOME.'/.cache/vim') == 0
+    call mkdir($HOME.'/.cache/vim/swap', 'p')
+    call mkdir($HOME.'/.cache/vim/backup', 'p')
+    call mkdir($HOME.'/.cache/vim/undo', 'p')
+endif
+
+set directory=~/.cache/vim/swap//
+set backupdir=~/.cache/vim/backup//
+set undodir=~/.cache/vim/undo//
+set noswapfile
+set backup
+set nowritebackup
+set undofile
+set undolevels=1000
+
+augroup recursive_mkdir_on_save
+    autocmd!
+    autocmd BufWritePre * if !isdirectory(expand("<afile>:p:h")) | call mkdir(expand("<afile>:p:h"), "p") | endif
+augroup END
+
+augroup cd_on_startup
+    autocmd!
+    autocmd VimEnter * if isdirectory(expand('%')) | cd % | endif
+augroup END
+
+augroup fix_tsx_syntax
+    autocmd!
+    autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+    autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+augroup END
+
+augroup dont_open_buffers_on_nerdtree_win
+    autocmd!
+    autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
+augroup END
+
+function ToggleNERDTree()
+    if filereadable(expand('%'))
+        NERDTreeFind
+    else
+        NERDTreeToggle
+    endif
+endfunction
+
+nnoremap - :call ToggleNERDTree()<CR>
+
+nnoremap <F1> <Nop>
+vnoremap <F1> <Nop>
+inoremap <F1> <Nop>
+nnoremap Q <Nop>
+nnoremap K <Nop>
+
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
+nnoremap 0 g^
+nnoremap $ g_
+vnoremap 0 g^
+vnoremap $ g_
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+inoremap <C-o> <C-x><C-o>
+inoremap <C-f> <C-x><C-f>
+inoremap <C-t> <C-x><C-]>
+
+xnoremap p pgvy
+nnoremap vv ^vg_
+cnoremap bd Bdelete
+nnoremap ]h :GitGutterNextHunk<CR>
+nnoremap [h :GitGutterPrevHunk<CR>
+nnoremap <Backspace> <C-^>
+
+nnoremap <Space>a :ALEFix<CR>
+nnoremap <Space>b :CtrlPBuffer<CR>
+nnoremap <Space>l :nohlsearch<C-r>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-l>
+nnoremap <Space>s :%s///gc<Left><Left><Left>
+nnoremap <Space>w :call WindowSwap#EasyWindowSwap()<CR>
+
+command! Spell set spell!
+command! SpellEnglish set spell spelllang=en_gb
+command! SpellSpanish set spell spelllang=es_es
+command! EditVimrc edit $MYVIMRC
+command! SourceVimrc source $MYVIMRC

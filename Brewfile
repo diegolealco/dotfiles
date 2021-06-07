@@ -16,7 +16,7 @@ cask "duplicati"
 cask "docker"
 
 brew "fnm"
-brew "macvim"
+brew "neovim"
 brew "curl"
 brew "git"
 brew "openssl"

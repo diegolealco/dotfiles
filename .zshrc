@@ -15,13 +15,13 @@ source $ZSH/oh-my-zsh.sh
 # USER CONFIGURATION
 
 if [[ "$(uname)" = "Darwin" ]]; then
-  alias vim="mvim -v"
+  alias vim="nvim"
   export MANPATH="/usr/local/man:$MANPATH"
 fi
 
 alias la="ls -lAh"
-export EDITOR='code --wait'
-export VISUAL="code --wait"
+export EDITOR='nvim'
+export VISUAL="nvim"
 export PATH="$HOME/.bin:$HOME/.fnm:$PATH"
 eval "`fnm env`"
 

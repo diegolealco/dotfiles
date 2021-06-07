@@ -14,9 +14,7 @@ cask "unison"
 cask "telegram"
 cask "duplicati"
 cask "docker"
-cask "slack"
-cask "vlc"
- 
+
 brew "fnm"
 brew "macvim"
 brew "curl"

@@ -74,11 +74,8 @@ set linebreak
 set ignorecase
 set smartcase
 
-set noswapfile
 set undofile
 set undolevels=1000
-set backup
-set nowritebackup
 
 if (empty($TMUX) && !has("termguicolors"))
     set termguicolors

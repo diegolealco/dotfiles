@@ -11,4 +11,3 @@ download-video \
   --no-post-overwrites \
   --batch-file="$HOME/Videos/feed-list.txt" \
   --dateafter "$(date -d 'last Week' +%Y%m%d)"
-

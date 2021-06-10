@@ -18,11 +18,9 @@ if [[ "$(uname)" = "Darwin" ]]; then
     export MANPATH="/usr/local/man:$MANPATH"
 fi
 
-export FZF_DEFAULT_COMMAND='fd --type f'
-alias vim="nvim"
 alias la="ls -lAh"
-export EDITOR='nvim'
-export VISUAL="nvim"
+export EDITOR='code --wait'
+export VISUAL="code --wait"
 export PATH="$HOME/.bin:$HOME/.fnm:$PATH"
 eval "`fnm env`"
 
@@ -36,4 +34,3 @@ _fnm_autoload_hook () {
 
 add-zsh-hook chpwd _fnm_autoload_hook \
     && _fnm_autoload_hook
-

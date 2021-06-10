@@ -12,4 +12,3 @@ youtube-dl \
   --embed-thumbnail \
   --restrict-filenames \
   $@
-

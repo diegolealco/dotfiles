@@ -16,13 +16,9 @@ cask "duplicati"
 cask "docker"
 
 brew "fnm"
-brew "neovim"
 brew "curl"
 brew "git"
-brew "openssl"
 brew "mosh"
 brew "youtube-dl"
 brew "ffmpeg"
 brew "mono"
-brew "fd"
-

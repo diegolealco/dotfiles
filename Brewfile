@@ -24,4 +24,4 @@ brew "mosh"
 brew "youtube-dl"
 brew "ffmpeg"
 brew "mono"
-
+brew "fd"

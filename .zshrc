@@ -15,10 +15,11 @@ source $ZSH/oh-my-zsh.sh
 # USER CONFIGURATION
 
 if [[ "$(uname)" = "Darwin" ]]; then
-  alias vim="nvim"
   export MANPATH="/usr/local/man:$MANPATH"
 fi
 
+export FZF_DEFAULT_COMMAND='fd --type f'
+alias vim="nvim"
 alias la="ls -lAh"
 export EDITOR='nvim'
 export VISUAL="nvim"

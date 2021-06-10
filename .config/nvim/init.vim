@@ -5,17 +5,19 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:ale_completion_autoimport = 1
 let g:ale_completion_enabled = 1
 let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\   'javascriptreact': ['eslint'],
-\   'typescript': ['eslint'],
-\   'typescriptreact': ['eslint'],
-\   'vue': ['eslint']
-\}
+            \   'javascript': ['prettier', 'eslint'],
+            \   'javascriptreact': ['prettier', 'eslint'],
+            \   'typescript': ['prettier', 'eslint'],
+            \   'typescriptreact': ['prettier', 'eslint'],
+            \   'vue': ['prettier', 'eslint']
+            \}
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = "--loglevel silent"
 let g:fzf_preview_window = []
 let g:windowswap_map_keys = 0
 let g:gitgutter_map_keys = 0
+let g:test#strategy = "neovim"
+let g:test#echo_command = 0
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
@@ -24,7 +26,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'moll/vim-bbye'
 Plug 'nanotech/jellybeans.vim'
-Plug 'preservim/nerdtree'
+Plug 'justinmk/vim-dirvish'
 Plug 'sheerun/vim-polyglot'
 Plug 'sirver/ultisnips'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
@@ -37,6 +39,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'w0rp/ale'
 Plug 'wesQ3/vim-windowswap'
+Plug 'vim-test/vim-test'
 call plug#end()
 
 set clipboard^=unnamedplus,unnamed
@@ -54,21 +57,24 @@ set splitright
 set fileformats=unix,dos,mac
 set winwidth=80
 
+set autoindent
 set expandtab
 set shiftround
 set shiftwidth=4
+set smarttab
 set softtabstop=4
-
-set breakindent
-set linebreak
+set tabstop=8
 
 set list
 set listchars=tab:→\ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set showbreak=↪\ 
+set breakindent
+set linebreak
 
 set ignorecase
 set smartcase
 
+set noswapfile
 set undofile
 set undolevels=1000
 set backup
@@ -104,21 +110,6 @@ augroup cd_on_startup
     autocmd VimEnter * if isdirectory(expand('%')) | cd % | endif
 augroup END
 
-augroup dont_open_buffers_on_nerdtree_win
-    autocmd!
-    autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" && winnr('$') > 1 | b# | endif
-augroup END
-
-function ToggleNERDTree()
-    if filereadable(expand('%'))
-        NERDTreeFind
-    else
-        NERDTreeToggle
-    endif
-endfunction
-
-nnoremap - :call ToggleNERDTree()<CR>
-
 nnoremap j gj
 nnoremap k gk
 vnoremap j gj
@@ -146,17 +137,18 @@ inoremap <C-o> <C-x><C-o>
 inoremap <C-f> <C-x><C-f>
 inoremap <C-t> <C-x><C-]>
 
-" xnoremap p pgvy
 nnoremap vv ^vg_
 cnoremap bd Bdelete
 nnoremap <Backspace> <C-^>
 nnoremap ]h :GitGutterNextHunk<CR>
 nnoremap [h :GitGutterPrevHunk<CR>
 
+tnoremap <C-o> <C-\><C-n>
+
+nnoremap <Space>t :TestNearest<CR>
 nnoremap <Space>a :ALEFix<CR>
 nnoremap <Space>b :Buffers<CR>
 nnoremap <Space>f :Files<CR>
-nnoremap <Space>h :h '<C-r><C-w><tab><CR>
 nnoremap <Space>l :nohlsearch<C-r>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-l>
 nnoremap <Space>s :%s///gc<Left><Left><Left>
 nnoremap <Space>w :call WindowSwap#EasyWindowSwap()<CR>

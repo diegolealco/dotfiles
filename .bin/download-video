@@ -7,6 +7,6 @@ youtube-dl \
   --merge-output-format 'mp4' \
   --output "$HOME/Videos/%(uploader)s/%(upload_date)s %(title)s.%(ext)s" \
   --embed-thumbnail \
-  --download-archive "$HOME/Videos/archive.txt" \
+  --download-archive "$HOME/Videos/download-archive.txt" \
   --restrict-filenames \
   $@

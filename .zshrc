@@ -24,7 +24,6 @@ export VISUAL="code --wait"
 export PATH="$HOME/.bin:$HOME/.fnm:$PATH"
 eval "`fnm env`"
 
-
 autoload -U add-zsh-hook
 _fnm_autoload_hook () {
     if [[ -f .node-version || -f .nvmrc ]]; then

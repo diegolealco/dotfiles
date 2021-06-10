@@ -7,7 +7,7 @@ youtube-dl \
   --extract-audio \
   --audio-format "mp3" \
   --audio-quality 0 \
-  --download-archive "$HOME/Music/archive.txt" \
+  --download-archive "$HOME/Music/download-archive.txt" \
   --write-thumbnail \
   --embed-thumbnail \
   --restrict-filenames \

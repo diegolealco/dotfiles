@@ -1,3 +1,5 @@
+tap "homebrew/cask-fonts"
+
 cask "brave-browser"
 cask "google-chrome"
 cask "firefox"
@@ -12,6 +14,7 @@ cask "unison"
 cask "telegram"
 cask "duplicati"
 cask "docker"
+cask "font-agave-nerd-font"
 
 brew "fnm"
 brew "curl"

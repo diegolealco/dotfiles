@@ -136,7 +136,6 @@ inoremap <C-t> <C-x><C-]>
 
 nnoremap vv ^vg_
 cnoremap bd Bdelete
-nnoremap <Backspace> <C-^>
 nnoremap ]h :GitGutterNextHunk<CR>
 nnoremap [h :GitGutterPrevHunk<CR>
 

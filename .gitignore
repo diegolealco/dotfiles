@@ -1,1 +1,5 @@
 .DS_Store
+.config/nvim/plugged/
+.local/share/nvim/undo/
+.local/share/nvim/shada/
+.local/share/nvim/rplugin.vim

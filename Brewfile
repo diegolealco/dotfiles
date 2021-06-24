@@ -17,9 +17,12 @@ cask "docker"
 cask "font-agave-nerd-font"
 
 brew "fnm"
+brew "neovim"
 brew "curl"
 brew "git"
 brew "mosh"
 brew "youtube-dl"
 brew "ffmpeg"
 brew "mono"
+brew "fd"
+

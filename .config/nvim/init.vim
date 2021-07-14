@@ -9,7 +9,8 @@ let g:ale_fixers = {
             \   'javascriptreact': ['prettier', 'eslint'],
             \   'typescript': ['prettier', 'eslint'],
             \   'typescriptreact': ['prettier', 'eslint'],
-            \   'vue': ['prettier', 'eslint']
+            \   'vue': ['prettier', 'eslint'],
+            \   'sh': ['shfmt']
             \}
 let g:ale_fix_on_save = 1
 let g:ale_javascript_prettier_options = "--loglevel silent"
